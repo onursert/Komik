@@ -25,4 +25,4 @@ Comics Reader Features<br>
 -Zoom in or out book pages<br>
 -Jump between pages in a comics with comics content list or slider<br><br>
 
-CBR support is coming soon<br>
+CBR support is coming soon<br><br>
