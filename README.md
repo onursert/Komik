@@ -1,5 +1,6 @@
 # Komik
-Komik: Comics Reader - 2019 (Java) (Android)<br><br>
+Komik: Comics Reader - 2019 (Java) (Android)<br>
+<a href="https://play.google.com/store/apps/details?id=com.github.onursert.komik">Komik on Google Play</a><br><br>
 
 Komik: Comics CBZ Reader (Fast, Lite, Simple and Open Source)<br><br>
 
