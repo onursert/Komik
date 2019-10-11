@@ -1,10 +1,10 @@
 # Komik
-Komik: Comics Reader - 2019 (Java) (Android)<br>
+Komik: Comic Reader - 2019 (Java) (Android)<br>
 <a href="https://play.google.com/store/apps/details?id=com.github.onursert.komik">Komik on Google Play</a><br><br>
 
-Komik: Comics CBZ Reader (Fast, Lite, Simple and Open Source)<br><br>
+Komik: Comic CBZ Reader (Fast, Lite, Simple and Open Source)<br><br>
 
--Very fast comics detect and sync<br>
+-Very fast comic detect and sync<br>
 -Requires low mermory space (approximately 3-4 mb)<br>
 -User friendly experience with modern design<br>
 -Open source project and library (github.com/onursert/komik)<br><br>
@@ -22,8 +22,8 @@ Library Features<br>
 -Sort and show comics by title, import time or open time<br>
 -Show or hide import time and open time on interface<br><br>
 
-Comics Reader Features<br>
+Comic Reader Features<br>
 -Zoom in or out book pages<br>
--Jump between pages in a comics with comics content list or slider<br><br>
+-Jump between pages in a comic with comic content list or slider<br><br>
 
 CBR support is coming soon<br><br>
