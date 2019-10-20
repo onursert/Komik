@@ -11,7 +11,7 @@ Komik: Comic CBZ Reader (Fast, Lite, Simple and Open Source)<br><br>
 
 Settings<br>
 -Keep screen on when reading<br>
--Automatic and fast book sync on startup<br>
+-Automatic and fast comic sync on startup<br>
 -Rotation lock for portrait and landscape mode<br><br>
 
 Library Features<br>
@@ -23,7 +23,7 @@ Library Features<br>
 
 Comic Reader (Viewer) Features<br>
 -Save where I left feature<br>
--Zoom in or out book pages<br>
+-Zoom in or out comic pages<br>
 -Jump between pages in a comic with comic content list or slider<br><br>
 
 CBR support is coming soon<br><br>
