@@ -91,7 +91,7 @@ public class ComicViewer extends AppCompatActivity implements NavigationView.OnN
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                seekBar.setProgress(100 * position / pages.size());
+                seekBar.setProgress(position);
             }
 
             @Override
@@ -124,9 +124,9 @@ public class ComicViewer extends AppCompatActivity implements NavigationView.OnN
         refreshComic = MainActivity.getInstance().refreshComic;
 
         //Seekbar
-        final TextView textViewPercent = (TextView) findViewById(R.id.textViewPercent);
+        final TextView textViewNumber = (TextView) findViewById(R.id.textViewNumber);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
-        seekBar.setMax(100);
+        seekBar.setMax(pages.size() - 1);
         seekBar.setPadding(100, 0, 100, 0);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progress;
@@ -134,7 +134,7 @@ public class ComicViewer extends AppCompatActivity implements NavigationView.OnN
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 this.progress = progress;
-                textViewPercent.setText(progress + "%");
+                textViewNumber.setText(progress + "/" + (pages.size() - 1));
             }
 
             @Override
@@ -143,7 +143,7 @@ public class ComicViewer extends AppCompatActivity implements NavigationView.OnN
 
             @Override
             public void onStopTrackingTouch(final SeekBar seekBar) {
-                viewPager.setCurrentItem(pages.size() * progress / 100);
+                viewPager.setCurrentItem(progress);
             }
         });
 
