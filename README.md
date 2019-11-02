@@ -18,12 +18,14 @@ Library Features<br>
 -Edit comics by changing title<br>
 -Delete comics from library or phone memory<br>
 -Search comics with title in library<br>
+-View comic list with list view (1 grid for vertical orientation) or grid view (2 grid for horizontal orientation or tablets)<br>
 -Sort and show comics by title, import time or open time<br>
 -Show or hide import time and open time on interface<br><br>
 
 Comic Reader (Viewer) Features<br>
 -Save where I left feature<br>
 -Zoom in or out comic pages<br>
--Jump between pages in a comic with comic content list or slider<br><br>
+-Jump between pages in a comic with comic content list or seek bar<br>
+-Shows current page name and current page number / page count<br><br>
 
 CBR support is coming soon<br><br>
