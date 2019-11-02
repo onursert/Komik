@@ -26,6 +26,6 @@ Comic Reader (Viewer) Features<br>
 -Save where I left feature<br>
 -Zoom in or out comic pages<br>
 -Jump between pages in a comic with comic content list or seek bar<br>
--Shows current page name and current page number / page count<br><br>
+-Shows current page name and current page number / page count in seek bar<br><br>
 
 CBR support is coming soon<br><br>
