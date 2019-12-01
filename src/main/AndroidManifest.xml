@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".MainSettings" />
-        <activity android:name=".ComicViewer"
+        <activity 
+            android:name=".ComicViewer"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
