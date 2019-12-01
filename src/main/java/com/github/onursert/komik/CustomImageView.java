@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import java.util.Calendar;
 
 public class CustomImageView extends android.support.v7.widget.AppCompatImageView {
+    
     Matrix matrix;
 
     static final int NONE = 0;
@@ -53,7 +54,6 @@ public class CustomImageView extends android.support.v7.widget.AppCompatImageVie
         super(context, attrs);
         sharedConstructing(context);
     }
-
     private void sharedConstructing(Context context) {
         super.setClickable(true);
         this.context = context;
