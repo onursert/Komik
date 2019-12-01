@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainSettings"></activity>
+        <activity android:name=".MainSettings" />
         <activity android:name=".ComicViewer"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
