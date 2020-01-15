@@ -7,7 +7,7 @@
   <li>Very fast comic detect and sync</li>
   <li>Requires low mermory space</li>
   <li>User friendly experience with modern design</li>
-  <li>Open source project and library (github.com/onursert/komik)</li>
+  <li>Open source project and library (<a href="https://github.com/onursert/komik">github.com/onursert/komik</a>)</li>
 </ul>
 
 <h3>Settings</h3>
