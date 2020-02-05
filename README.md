@@ -1,5 +1,5 @@
 # Komik
-<p>Komik: Comic Reader - 2019 (Java) (Android)</p>
+<p>Komik: Comic Reader - 2019 (Java) (Android App)</p>
 <p>It's 100% ad-free</p>
 <a href="https://play.google.com/store/apps/details?id=com.github.onursert.komik">Komik on Google Play</a>
 
