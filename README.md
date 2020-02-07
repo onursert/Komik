@@ -37,4 +37,4 @@
 </ul>
 
 <p>CBR support is coming soon</p>
-<p>*It's only contains BookPub and Leaf ads.</p>
+<p>*It only contains BookPub and Leaf ads.</p>
