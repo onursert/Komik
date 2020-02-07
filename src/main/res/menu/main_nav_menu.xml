@@ -21,5 +21,20 @@
             android:icon="@drawable/ic_message_black_24dp"
             android:title="Contact" />
     </group>
+    
+    <group
+        android:id="@+id/main_nav_menu_commercial"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_bookpub"
+            android:icon="@drawable/ic_apps_black_24dp"
+            android:title="BookPub: EPUB Reader" />
+
+        <item
+            android:id="@+id/nav_leaf"
+            android:icon="@drawable/ic_apps_black_24dp"
+            android:title="Leaf: PDF Reader" />
+    </group>
 
 </menu>
