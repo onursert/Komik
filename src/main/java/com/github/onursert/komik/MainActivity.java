@@ -75,6 +75,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.getMenu().getItem(1).setCheckable(false);
         navigationView.getMenu().getItem(2).setCheckable(false);
         navigationView.getMenu().getItem(3).setCheckable(false);
+        navigationView.getMenu().getItem(4).setCheckable(false);
+        navigationView.getMenu().getItem(5).setCheckable(false);
+        navigationView.getMenu().getItem(4).setTitle(Html.fromHtml("<font color='#008577'>BookPub: EPUB Reader</font>"));
+        navigationView.getMenu().getItem(5).setTitle(Html.fromHtml("<font color='#008577'>Leaf: PDF Reader</font>"));
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
@@ -300,6 +304,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_contact:
                 Intent intentContact = new Intent(Intent.ACTION_VIEW, Uri.parse("https://onursert.org/"));
                 startActivity(intentContact);
+                break;
+            case R.id.nav_bookpub:
+                Intent intentBookPub = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.github.onursert.bookpub"));
+                startActivity(intentBookPub);
+                break;
+            case R.id.nav_leaf:
+                Intent intentLeaf = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.github.onursert.leaf"));
+                startActivity(intentLeaf);
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);
