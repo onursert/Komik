@@ -315,68 +315,80 @@ public class RefreshComic {
 
     //Functions Which Come From Another Class
     public void addOpenTime(List<List> comicList, String path, String openTime) throws IOException {
-        for (int i = 0; i < comicList.size(); i++) {
-            if (comicList.get(i).get(2).equals(path)) {
-                List comicInfo = new LinkedList();
-                comicInfo.add(comicList.get(i).get(0)); //comicTitle
-                comicInfo.add(comicList.get(i).get(1)); //comicCover
-                comicInfo.add(comicList.get(i).get(2)); //comicPath
-                comicInfo.add(comicList.get(i).get(3)); //importTime
-                comicInfo.add(openTime); //openTime
-                comicInfo.add(comicList.get(i).get(5)); //currentPage
-                comicList.set(i, comicInfo);
-                break;
+        if (comicList != null) {
+            final int comicListSize = comicList.size();
+            for (int i = 0; i < comicListSize; i++) {
+                if (comicList.get(i).get(2).equals(path)) {
+                    List comicInfo = new LinkedList();
+                    comicInfo.add(comicList.get(i).get(0)); //comicTitle
+                    comicInfo.add(comicList.get(i).get(1)); //comicCover
+                    comicInfo.add(comicList.get(i).get(2)); //comicPath
+                    comicInfo.add(comicList.get(i).get(3)); //importTime
+                    comicInfo.add(openTime); //openTime
+                    comicInfo.add(comicList.get(i).get(5)); //currentPage
+                    comicList.set(i, comicInfo);
+                    break;
+                }
             }
+            sortByPreferences(comicList);
+            customAdapter.notifyDataSetChanged();
         }
-        sortByPreferences(comicList);
-        customAdapter.notifyDataSetChanged();
     }
     public void editComic(List<List> comicList, String title, String path) throws IOException {
-        for (int i = 0; i < comicList.size(); i++) {
-            if (comicList.get(i).get(2).equals(path)) {
-                List comicInfo = new LinkedList();
-                comicInfo.add(title); //comicTitle
-                comicInfo.add(comicList.get(i).get(1)); //comicCover
-                comicInfo.add(comicList.get(i).get(2)); //comicPath
-                comicInfo.add(comicList.get(i).get(3)); //importTime
-                comicInfo.add(comicList.get(i).get(4)); //openTime
-                comicInfo.add(comicList.get(i).get(5)); //currentPage
-                comicList.set(i, comicInfo);
-                break;
+        if (comicList != null) {
+            final int comicListSize = comicList.size();
+            for (int i = 0; i < comicListSize; i++) {
+                if (comicList.get(i).get(2).equals(path)) {
+                    List comicInfo = new LinkedList();
+                    comicInfo.add(title); //comicTitle
+                    comicInfo.add(comicList.get(i).get(1)); //comicCover
+                    comicInfo.add(comicList.get(i).get(2)); //comicPath
+                    comicInfo.add(comicList.get(i).get(3)); //importTime
+                    comicInfo.add(comicList.get(i).get(4)); //openTime
+                    comicInfo.add(comicList.get(i).get(5)); //currentPage
+                    comicList.set(i, comicInfo);
+                    break;
+                }
             }
+            sortByPreferences(comicList);
+            customAdapter.notifyDataSetChanged();
         }
-        sortByPreferences(comicList);
-        customAdapter.notifyDataSetChanged();
     }
     public void deleteComic(List<List> comicList, String path, Boolean deleteDevice) throws IOException {
-        for (int i = 0; i < comicList.size(); i++) {
-            if (comicList.get(i).get(2).equals(path)) {
-                comicList.remove(i);
-                if (deleteDevice) {
-                    File file = new File(path);
-                    file.delete();
+        if (comicList != null) {
+            final int comicListSize = comicList.size();
+            for (int i = 0; i < comicListSize; i++) {
+                if (comicList.get(i).get(2).equals(path)) {
+                    comicList.remove(i);
+                    if (deleteDevice) {
+                        File file = new File(path);
+                        file.delete();
+                    }
+                    break;
                 }
-                break;
             }
+            sortByPreferences(comicList);
+            customAdapter.notifyDataSetChanged();
         }
-        sortByPreferences(comicList);
-        customAdapter.notifyDataSetChanged();
     }
     public void addCurrentPage(List<List> comicList, String path, Integer currentPage) throws IOException {
-        for (int i = 0; i < comicList.size(); i++) {
-            if (comicList.get(i).get(2).equals(path)) {
-                List comicInfo = new LinkedList();
-                comicInfo.add(comicList.get(i).get(0)); //comicTitle
-                comicInfo.add(comicList.get(i).get(1)); //comicCover
-                comicInfo.add(comicList.get(i).get(2)); //comicPath
-                comicInfo.add(comicList.get(i).get(3)); //importTime
-                comicInfo.add(comicList.get(i).get(4)); //openTime
-                comicInfo.add(currentPage); //currentPage
-                comicList.set(i, comicInfo);
-                break;
+        if (comicList != null) {
+            final int comicListSize = comicList.size();
+            for (int i = 0; i < comicListSize; i++) {
+                if (comicList.get(i).get(2).equals(path)) {
+                    List comicInfo = new LinkedList();
+                    comicInfo.add(comicList.get(i).get(0)); //comicTitle
+                    comicInfo.add(comicList.get(i).get(1)); //comicCover
+                    comicInfo.add(comicList.get(i).get(2)); //comicPath
+                    comicInfo.add(comicList.get(i).get(3)); //importTime
+                    comicInfo.add(comicList.get(i).get(4)); //openTime
+                    comicInfo.add(currentPage); //currentPage
+                    comicList.set(i, comicInfo);
+                    break;
+                }
             }
+            sortByPreferences(comicList);
+            customAdapter.notifyDataSetChanged();
         }
-        sortByPreferences(comicList);
-        customAdapter.notifyDataSetChanged();
     }
 }
