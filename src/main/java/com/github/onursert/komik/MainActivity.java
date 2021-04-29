@@ -399,11 +399,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 
             case R.id.viewList:
                 recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                 setToPreferences("view", "viewList");
                 whichView(mainMenu);
                 return true;
             case R.id.viewGrid:
                 recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
                 setToPreferences("view", "viewGrid");
                 whichView(mainMenu);
                 return true;
@@ -519,7 +521,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 editComic.show();
                 return true;
             case R.id.delete:
-                DeleteComicDialog deleteComic = new DeleteComicDialog(this, comicList.get(customAdapter.position).get(2).toString(), refreshComic, customAdapter);
+                DeleteComicDialog deleteComic = new DeleteComicDialog(this, comicList.get(customAdapter.position).get(0).toString(), comicList.get(customAdapter.position).get(2).toString(), refreshComic, customAdapter);
                 deleteComic.show();
                 return true;
             default:
