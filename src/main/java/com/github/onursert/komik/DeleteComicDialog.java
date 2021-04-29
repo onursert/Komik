@@ -13,17 +13,20 @@ import java.io.IOException;
 public class DeleteComicDialog extends Dialog implements View.OnClickListener {
 
     public Activity activity;
+    private String comicName;
     private String comicPath;
     RefreshComic refreshComic;
     CustomAdapter customAdapter;
 
+    public TextView name;
+    public CheckBox deleteDevice;
     public Button delete;
     public Button cancel;
-    public CheckBox deleteDevice;
 
-    public DeleteComicDialog(Activity activity, String comicPath, RefreshComic refreshComic, CustomAdapter customAdapter) {
+    public DeleteComicDialog(Activity activity, String comicName, String comicPath, RefreshComic refreshComic, CustomAdapter customAdapter) {
         super(activity);
         this.activity = activity;
+        this.comicName = comicName;
         this.comicPath = comicPath;
         this.refreshComic = refreshComic;
         this.customAdapter = customAdapter;
@@ -34,6 +37,9 @@ public class DeleteComicDialog extends Dialog implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.delete_comic_dialog);
+        
+        name = (TextView) findViewById(R.id.comicNameTextView);
+        name.setText("Do you want to delete " + comicName);
 
         deleteDevice = (CheckBox) findViewById(R.id.deleteCheckBox);
 
