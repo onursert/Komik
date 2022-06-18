@@ -32,7 +32,7 @@
     <PreferenceCategory android:title="Info">
 
         <Preference
-            android:summary="2.3"
+            android:summary="2.4"
             android:title="App Version" />
 
         <Preference
