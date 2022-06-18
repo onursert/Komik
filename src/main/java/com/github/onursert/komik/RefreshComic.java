@@ -178,17 +178,21 @@ public class RefreshComic {
         return false;
     }
     public Bitmap FindCover(String srcDir) throws IOException {
-        ZipFile zipFile = new ZipFile(srcDir);
-        Enumeration<? extends ZipEntry> entries = zipFile.entries();
-        Bitmap photo = null;
-        ZipEntry zipEntry = entries.nextElement();
-        photo = BitmapFactory.decodeStream(zipFile.getInputStream(zipEntry));
-        while (photo == null && entries.hasMoreElements()) {
-            zipEntry = entries.nextElement();
+        try {
+            ZipFile zipFile = new ZipFile(srcDir);
+            Enumeration<? extends ZipEntry> entries = zipFile.entries();
+            Bitmap photo = null;
+            ZipEntry zipEntry = entries.nextElement();
             photo = BitmapFactory.decodeStream(zipFile.getInputStream(zipEntry));
+            while (photo == null && entries.hasMoreElements()) {
+                zipEntry = entries.nextElement();
+                photo = BitmapFactory.decodeStream(zipFile.getInputStream(zipEntry));
+            }
+            zipFile.close();
+            return photo;
+        } catch (Exception e) {
+            return null;
         }
-        zipFile.close();
-        return photo;
     }
     public void sortByPreferences(List<List> comicList) throws IOException {
         if (getFromPreferences("sort").equals("sortTitle")) {
